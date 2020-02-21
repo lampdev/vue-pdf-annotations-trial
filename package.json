@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "create-stylesheet": "^0.3.0",
+    "pdfjs-dist": "^2.2.228",
+    "twitter-text": "^3.0.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {

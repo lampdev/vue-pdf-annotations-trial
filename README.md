@@ -1,4 +1,4 @@
-# pdf-trial
+# Pdf Web Viewer
 
 ## Project setup
 ```

@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 40px 0;
+}
+
+.toolbar {
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  text-shadow: 1px 1px 0 #fff;
+  z-index: 100;
+}
+
+span.download img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+span.download {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 8px;
+  cursor: pointer;
+  border: 1px solid silver;
+  border-radius: 3px;
+}
+
+.toolbar-left-side {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+.toolbar .spacer {
+  display: inline-block;
+  border-left: 1px solid #c1c1c1;
+  height: 34px;
+  margin: 0 5px -11px;
+}
+
+.toolbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toolbar button,
+a.clear {
+  background-color: #fff;
+  /* border: 1px solid silver; */
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 3px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  position: relative;
+  width: 27px;
+  height: 27px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.eraser::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -10px;
+  width: 1px;
+  display: block;
+  background-color: silver;
+}
+
+button.comment img {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.toolbar button:after {
+  content: ' ';
+  display: block;
+}
+.toolbar button.active {
+  border-color: #bababa;
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.25);
+     -moz-box-shadow: inset 0 0 1px rgba(0,0,0,0.25);
+          box-shadow: inset 0 0 1px rgba(0,0,0,0.25);
+}
+.toolbar button:hover,
+.toolbar button:focus {
+  border-color: #bababa;
+}
+
+.toolbar button.pen {
+  font-size: 16px;
+}
+
+.toolbar button.comment {
+  font-size: 15px;
+  color: silver;
+  text-shadow: 0 0 0 #000000;
+}
+
+.toolbar button.rectangle:after {
+  width: 15px;
+  height: 15px;
+  border: 1px solid red;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.toolbar button.circle:after {
+  width: 15px;
+  height: 15px;
+  border: 0px solid red;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.toolbar button.highlight:after {
+  width: 17px;
+  height: 17px;
+  background: yellow;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.toolbar button.strikeout:after {
+  width: 15px;
+  height: 1px;
+  background: red;
+  position: absolute;
+  top: 12px;
+  left: 4px;
+}
+
+.toolbar button.text:after {
+  content: 'T';
+  font-family: 'Times New Roman';
+}
+
+.color {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.color-selected {
+  border: 3px solid #666;
+  width: 30px;
+  height: 30px;
+  margin-top: -1px;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.text-color, .pen-color, .hotspot-color {
+  display: inline-block;
+  position: relative;
+}
